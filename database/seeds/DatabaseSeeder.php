@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+use database\seeds\UsersTableSeeder;
+use database\seeds\TeamsTableSeeder;
+use database\seeds\DriversTableSeeder;
+use database\seeds\RacesTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +16,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+		Model::unguard();
+        $this->call('UsersTableSeeder');
+        $this->call('TeamsTableSeeder');
+        $this->call('DriversTableSeeder');
+        $this->call('RacesTableSeeder');
+        Model::reguard();
     }
 }

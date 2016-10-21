@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace F1donky\Events;
 
 abstract class Event
 {

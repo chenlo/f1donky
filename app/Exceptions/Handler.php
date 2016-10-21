@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace F1donky\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;

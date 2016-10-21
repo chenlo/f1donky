@@ -10,7 +10,25 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/rules', function () {
+    return view('rules');
+});
+
+Route::get('/drivers', function () {
+	$drivers = F1donky\Driver::all();
+    return view('drivers.index')->with('drivers', $drivers);
+});
+
+Route::get('/standings', 'BetController@standings');
+
+Route::resource('races', 'RaceController');
+
+Route::resource('bets', 'BetController');
+
+Route::get('/home', 'HomeController@index');
+
+Route::auth();

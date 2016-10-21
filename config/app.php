@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -151,11 +151,13 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        F1donky\Providers\AppServiceProvider::class,
+        F1donky\Providers\AuthServiceProvider::class,
+        F1donky\Providers\EventServiceProvider::class,
+        F1donky\Providers\RouteServiceProvider::class,
 
+        /* Bootstrap */
+        Collective\Html\HtmlServiceProvider::class,
     ],
 
     /*
@@ -201,7 +203,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        /* Bootstrap */
+        'Form' => 'Collective\Html\FormFacade',
+        'Html' => 'Collective\Html\HtmlFacade',
     ],
 
 ];

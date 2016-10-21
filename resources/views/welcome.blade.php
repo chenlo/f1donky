@@ -1,45 +1,26 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.master')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
+@section('content')
+<!-- HOME -->
+<section class="bg-custom home" id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="home-fullscreen" id="home-fullscreen">
+                    <div class="full-screen">
+                        <div class="home-wrapper home-wrapper-alt">
+                            <h1 class="font-light text-white">F1 Donky <?php echo date("Y"); ?></h1>
+                            <h4 class="text-light">Quédate con la pasta del resto demuestrando cuánto sabes de Fórmula 1.</h4>
+                            <a href="{{ url('/login') }}" class="btn btn-white-bordered">Login para jugar</a><br><br>
+                            <a href="http://f1.donky.es/old" class="">
+                                Si no te fías del nuevo interfaz, puedes jugar también en la vieja
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+</section>
+<!-- END HOME -->
+@endsection
